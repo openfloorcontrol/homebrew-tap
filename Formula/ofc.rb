@@ -5,23 +5,23 @@
 class Ofc < Formula
   desc "Open Floor Control - multi-agent conversation protocol"
   homepage "https://ofc.dev"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.1.0/ofc_0.1.0_darwin_amd64.tar.gz"
-      sha256 "226992bddff639bdac543dc8a8fbe01527b105c722977eee8a0c31e7cca33a80"
+      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.2.0/ofc_0.2.0_darwin_amd64.tar.gz"
+      sha256 "cadf7395f6750d2712a135f06101f5deebf8529ffb0f883fa8540cb5919b7843"
 
-      def install
+      define_method(:install) do
         bin.install "ofc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.1.0/ofc_0.1.0_darwin_arm64.tar.gz"
-      sha256 "6531914491211d594d264c86158f007c4770b54b1e7e3b42ddca320d61025c1a"
+      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.2.0/ofc_0.2.0_darwin_arm64.tar.gz"
+      sha256 "4c06e111e5875514f52a7153ca7f90141b14d307a4d53449ebd6c76035852017"
 
-      def install
+      define_method(:install) do
         bin.install "ofc"
       end
     end
@@ -29,16 +29,16 @@ class Ofc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.1.0/ofc_0.1.0_linux_amd64.tar.gz"
-      sha256 "419ec42bb9fcdc9c10e56fe428d720793a27b9ceab54ae00b599cdb81f8d2373"
-      def install
+      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.2.0/ofc_0.2.0_linux_amd64.tar.gz"
+      sha256 "2b656899896ab83aea6559e7f0402ad5d39e37ddc0c5e0417cd9a4914d4bc2e7"
+      define_method(:install) do
         bin.install "ofc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.1.0/ofc_0.1.0_linux_arm64.tar.gz"
-      sha256 "e4a9f2bec6d5ba048d3666a513c312c036cc2f741a2f79f960c9ff964738a769"
-      def install
+      url "https://github.com/openfloorcontrol/ofc/releases/download/v0.2.0/ofc_0.2.0_linux_arm64.tar.gz"
+      sha256 "f69a3193519880f41d78b5e1aeb2405c807462c3aa71233186b24d274b08bb9d"
+      define_method(:install) do
         bin.install "ofc"
       end
     end
